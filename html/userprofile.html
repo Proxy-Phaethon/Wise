@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WISE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/userprofile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <h1>WISE</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="landing.html">Home</a></li> <!-- landing page for wise -->
+                <li><a href="index.html">Dashboard</a></li> <!-- control panel showing task list, avatar, pet, spotify player, time, date, weather, progress bar for daily tasks, activity log, and a cute little awards section -->
+                <li><a href="updates.html">Daily Updates</a></li> <!-- for daily news -->
+                <li><a href="forms.html">Request Forms</a></li> <!-- for leave requests, item requests, etc. -->
+                <li><a href="editor.html">Editor</a></li> <!-- document editor -->
+                <li><a href="calendar.html">Calendar</a></li> <!-- calendar with scheduling system -->
+                <li><a href="userprofile.html">Profile</a></li> <!-- user's profile -->
+            </ul>
+        </nav>
+
+        <main class="profile-page">
+            <div class="color">
+                <div class="profile-nav">
+                    <ul>
+                        <li><button class="nav-btn" data-target="my-profile">My Profile</button></li>
+                        <li><button class="nav-btn" data-target="task-history">Task History</button></li>
+                        <li><button class="nav-btn" data-target="team-details">Team Details</button></li>
+                        <li><button class="nav-btn" data-target="workflows">Workflows</button></li>
+                        <li><button class="nav-btn" data-target="submitted-forms">Submitted Forms</button></li>
+                        <li><button class="nav-btn" data-target="settings">Settings</button></li>
+                        <li><button class="nav-btn" data-target="logout">Logout</button></li>
+                    </ul>
+                </div>
+            <div class="profile-details">
+                <section id="my-profile" class="profile-section">
+                    <h2>My Profile</h2>
+                    <p>Here are some details about your profile.</p>
+                    <ul>
+                        <li>Name: John Doe</li>
+                        <li>Email: john.doe@example.com</li>
+                    </ul>
+                </section>
+        
+                <section id="task-history" class="profile-section" style="display: none;">
+                    <h2>Task History</h2>
+                    <p>Details of completed tasks...</p>
+                </section>
+        
+                <section id="team-details" class="profile-section" style="display: none;">
+                    <h2>Team Details</h2>
+                    <p>Details about the user's team...</p>
+                </section>
+        
+                <section id="workflows" class="profile-section" style="display: none;">
+                    <h2>Workflows</h2>
+                    <p>Information about workflows...</p>
+                </section>
+        
+                <section id="submitted-forms" class="profile-section" style="display: none;">
+                    <h2>Submitted Forms</h2>
+                    <p>List of forms submitted by the user...</p>
+                </section>
+        
+                <section id="settings" class="profile-section" style="display: none;">
+                    <h2>Settings</h2>
+                    <p>Settings options for the user...</p>
+                </section>
+        
+                <section id="logout" class="profile-section" style="display: none;">
+                    <h2>Logout</h2>
+                    <p>Logout button or functionality...</p>
+                </section>
+                </div>
+            </div>
+        </main>               
+
+        <footer class="footer">
+            <p>&copy; 2025 Bastet - WISE</p>
+        </footer>
+
+        <script src="js/userprofile.js"></script>
+    </body>
+</html>

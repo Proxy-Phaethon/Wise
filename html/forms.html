@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WISE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/forms.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <h1>WISE</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href=landing.html>Home</a></li> <!-- landing page for wise -->
+                <li><a href="index.html">Dashboard</a></li> <!-- control panel showing task list, avatar, pet, spotify player, time, date, weather, progress bar for daily tasks, activity log, and a cute little awards section -->
+                <li><a href="updates.html">Daily Updates</a></li> <!-- for daily news -->
+                <li><a href="forms.html">Request Forms</a></li> <!-- for leave requests, item requests, etc. -->
+                <li><a href="editor.html">Editor</a></li> <!-- document editor -->
+                <li><a href="calendar.html">Calendar</a></li> <!-- calendar with scheduling system -->
+                <li><a href="userprofile.html">Profile</a></li> <!-- user's profile -->
+            </ul>
+        </nav>
+
+        <main class="forms-container">
+            <div class="hehe-box">
+                <div class="form-list">
+                    <div class="form-head">
+                        <h2>Forms</h2>
+                    </div>
+                    <div class="form-options">
+                        <ul>
+                            <li><button class="nav-btn" data-target="leave-request-form">Leave Request</button></li>
+                            <li><button class="nav-btn" data-target="overtime-request-form">Overtime Request</button></li>
+                            <li><button class="nav-btn" data-target="remote-work-request-form">Remote Work Request</button></li>
+                            <li><button class="nav-btn" data-target="shift-swap-request-form">Shift Swap Request</button></li>
+                            <li><button class="nav-btn" data-target="task-assignment-form">Task Assignment</button></li>
+                            <li><button class="nav-btn" data-target="project-status-update-form">Project Status Update</button></li>
+                            <li><button class="nav-btn" data-target="change-request-form">Change Request</button></li>
+                            <li><button class="nav-btn" data-target="incident-report-form">Incident Report</button></li>
+                            <li><button class="nav-btn" data-target="expense-reimbursement-form">Expense Reimbursement</button></li>
+                            <li><button class="nav-btn" data-target="item-equipment-acquisition-form">Item/Equipment Acquisition</button></li>
+                            <li><button class="nav-btn" data-target="budget-request-form">Budget Request</button></li>
+                            <li><button class="nav-btn" data-target="employee-performance-review-form">Employee Performance Review</button></li>
+                            <li><button class="nav-btn" data-target="self-evaluation-form">Self-Evaluation</button></li>
+                            <li><button class="nav-btn" data-target="peer-feedback-form">Peer Feedback</button></li>
+                            <li><button class="nav-btn" data-target="training-request-form">Training Request</button></li>
+                            <li><button class="nav-btn" data-target="confidentiality-agreement-form">Confidentiality Agreement</button></li>
+                            <li><button class="nav-btn" data-target="conflict-of-interest-disclosure-form">Conflict of Interest Disclosure</button></li>
+                            <li><button class="nav-btn" data-target="employee-exit-interview-form">Employee Exit Interview</button></li>
+                            <li><button class="nav-btn" data-target="workplace-incident-report-form">Workplace Incident Report</button></li>
+                            <li><button class="nav-btn" data-target="employee-grievance-form">Employee Grievance Form</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-editor">
+                    <div class="edit-head">
+                        <h2>Fill in Your Form</h2>
+                    </div>
+                    <div class="form-box">
+                        <section id="leave-request-form" class="form-section">
+                            <h3>Leave Request Form</h3>
+                            <form>
+                                <!-- Your form fields here -->
+                            </form>
+                        </section>
+                        <section id="overtime-request-form" class="form-section" style="display: none;">
+                            <h3>Overtime Request Form</h3>
+                            <form>
+                                <!-- Your form fields here -->
+                            </form>
+                        </section>
+                        <section id="remote-work-request-form" class="form-section" style="display: none;">
+                            <h3>Remote Work Request Form</h3>
+                            <form>
+                                <!-- Your form fields here -->
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>        
+
+        <footer class="footer">
+            <p>&copy; 2025 Bastet - WISE</p>
+        </footer>
+
+        <script src="js/forms.js"></script>
+    </body>
+</html>

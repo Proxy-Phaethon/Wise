@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WISE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <h1>WISE</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="landing.html">Home</a></li> <!-- landing page for wise -->
+                <li><a href="index.html">Dashboard</a></li> <!-- control panel showing task list, avatar, pet, spotify player, time, date, weather, progress bar for daily tasks, activity log, and a cute little awards section -->
+                <li><a href="updates.html">Daily Updates</a></li> <!-- for daily news -->
+                <li><a href="forms.html">Request Forms</a></li> <!-- for leave requests, item requests, etc. -->
+                <li><a href="editor.html">Editor</a></li> <!-- document editor -->
+                <li><a href="calendar.html">Calendar</a></li> <!-- calendar with scheduling system -->
+                <li><a href="userprofile.html">Profile</a></li> <!-- user's profile -->
+            </ul>
+        </nav>
+
+        <main class="container">       
+            <div class="progress-container">
+                <div class="progress-bar" id="taskProgress"></div>
+            </div>
+            <div class="task-list">
+                <h2>Your Tasks</h2>
+                <ul id="taskList"></ul>
+                <div class="task-form">
+                    <form id="addTaskForm">
+                        <input type="text" id="taskTitle" placeholder="New Task" required>
+                        <button type="submit">Add Task</button>
+                    </form>
+                </div>
+            </div>                                        
+            <div class="avatar">
+                <img src="others/big-enderman-face.png" alt="user profile picture">
+                <div class="user-info">
+                    <h2>Yuki Tsukumo</h2>
+                    <h3>Manager</h3>
+                    <p>Freelance Ltd., London</p>
+                    <p class="font">About Me....</p>
+                </div>
+                <button id="expandAvatar">⛶</button>
+            </div>
+            
+            <div class="expanded-avatar" id="expandedAvatar">
+                <button id="closeAvatar">✖</button>
+                <img src="others/big-enderman-face.png" alt="user profile picture">
+                <div class="user-info">
+                    <h2>Yuki Tsukumo</h2>
+                    <h3>Manager</h3>
+                    <p>Freelance Ltd., London</p>
+                    <p class="font" id="fullBioText">About Me... (full version with more details on work and life experiences).</p>
+                </div>
+            </div>            
+                <div class="top-right">
+                    <div class="time" id="timeDisplay"></div>
+                    <div class="date" id="dateDisplay"></div>
+                    <div class="weather" id="weatherDisplay"></div>
+                </div>
+                <div class="spotify-player">
+                    <iframe src="https://open.spotify.com/embed/playlist/0J7zb2oc4MVz9xNJQje6jD?utm_source=generator&theme=0" loading="lazy" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>
+                </div>                
+                <div class="cat">
+                    <video class="cat-clip" autoplay loop muted playsinline>
+                        <source src="others/pet-video.mp4" type="video/mp4">
+                    </video>
+                </div>                                    
+                <div class="quick-access">
+                    <h2>Quick Access</h2>
+                    <div class="fuckall">
+                        <div class="icon-row-1">
+                            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://mail.google.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                            <a href="https://drive.google.com" target="_blank"><i class="fab fa-google-drive"></i></a>
+                        </div>
+                        <div class="icon-row-2">
+                            <a href="https://www.discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+                            <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.reddit.com" target="_blank"><i class="fab fa-reddit"></i></a>
+                            <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                            <a href="https://trello.com" target="_blank"><i class="fab fa-trello"></i></a>
+                            <a href="https://web.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.paypal.com" target="_blank"><i class="fab fa-paypal"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbox">
+                    <div class="chatbox-header">
+                        <h2>Messages</h2>
+                        <button id="expandChat" onclick="expandChatbox()">⛶</button>
+                    </div>
+                    <div class="chatbox-messages" id="chatboxMessages"></div>
+                    <div class="chatbox-input">
+                        <input type="text" id="chatboxInput" placeholder="Type a message...">
+                        <button id="chatboxSend">Send</button>
+                    </div>                 
+                </div>
+                
+                <div class="chatbox-expanded" id="chatboxExpanded">
+                    <div class="chatbox-header" id="chatboxExpandedHeader">
+                        <h2>Messages</h2>
+                        <button id="closeChat" onclick="closeChatbox()">✖</button>
+                    </div>
+                    <div class="chatbox-messages" id="expandedChatMessages"></div>
+                    <div class="chatbox-input">
+                        <input type="text" id="expandedChatInput" placeholder="Type a message...">
+                        <button id="expandedChatSend">Send</button>
+                    </div>                 
+                </div>                                
+                <div class="recent-updates">
+                    <h2>Recent Updates</h2>
+                    <ul id="updates-list">
+                        <li><a href="updates.html#update-1">Weekly Stand-up: Priorities for the Week</a></li>
+                        <li><a href="updates.html#update-2">Bug Fix Roundup: Latest Issues & Resolutions</a></li>
+                        <li><a href="updates.html#update-3">User Interface Updates: New Dark Mode Implemented</a></li>
+                    </ul>
+                    <a href="updates.html" class="see-all">See All Updates</a>
+                </div>
+                <div class="activity-log">
+                    <h2>Activity Log</h2>
+                    <ul id="activityList">
+                        <li><span class="log-time">12:45 PM</span> - Logged in</li>
+                        <li><span class="log-time">12:50 PM</span> - Viewed Dashboard</li>
+                        <li><span class="log-time">1:10 PM</span> - Updated Profile</li>
+                    </ul>
+                </div>                
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Bastet - WISE</p>
+        </footer>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>

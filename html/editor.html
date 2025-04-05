@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WISE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/editor.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <h1>WISE</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href=landing.html>Home</a></li> <!-- landing page for wise -->
+                <li><a href="index.html">Dashboard</a></li> <!-- control panel showing task list, avatar, pet, spotify player, time, date, weather, progress bar for daily tasks, activity log, and a cute little awards section -->
+                <li><a href="updates.html">Daily Updates</a></li> <!-- for daily news -->
+                <li><a href="forms.html">Request Forms</a></li> <!-- for leave requests, item requests, etc. -->
+                <li><a href="editor.html">Editor</a></li> <!-- document editor -->
+                <li><a href="calendar.html">Calendar</a></li> <!-- calendar with scheduling system -->
+                <li><a href="userprofile.html">Profile</a></li> <!-- user's profile -->
+            </ul>
+        </nav>
+
+        <main class="editor-page">
+            <div class="editor-container">
+                <div class="editor-box">
+                    <div class="box-header">
+                        <h2>Templates</h2>
+                        <p>Choose a Template to edit.</p>
+                    </div>
+                    <ul class="template-list">
+                        <li><button class="template-btn" data-template="kickoff">Project Kickoff Plan</button></li>
+                        <li><button class="template-btn" data-template="progress-report">Weekly Progress Report</button></li>
+                        <li><button class="template-btn" data-template="task-breakdown">Task Breakdown Sheet</button></li>
+                        <li><button class="template-btn" data-template="stakeholder-analysis">Stakeholder Analysis</button></li>
+                        <li><button class="template-btn" data-template="meeting-summary">Meeting Summary</button></li>
+                        <li><button class="template-btn" data-template="risk-assessment">Risk Assessment Report</button></li>
+                        <li><button class="template-btn" data-template="budget-planning">Budget Planning</button></li>
+                        <li><button class="template-btn" data-template="team-assignment">Team Assignment Tracker</button></li>
+                        <li><button class="template-btn" data-template="marketing-strategy">Marketing Strategy Outline</button></li>
+                        <li><button class="template-btn" data-template="content-calendar">Content Calendar</button></li>
+                        <li><button class="template-btn" data-template="client-feedback">Client Feedback Form</button></li>
+                        <li><button class="template-btn" data-template="performance-review">Performance Review</button></li>
+                        <li><button class="template-btn" data-template="annual-report">Annual Report Summary</button></li>
+                        <li><button class="template-btn" data-template="onboarding-checklist">Employee Onboarding Checklist</button></li>
+                        <li><button class="template-btn" data-template="competitive-analysis">Competitive Analysis</button></li>
+                        <li><button class="template-btn" data-template="product-launch">Product Launch Plan</button></li>
+                        <li><button class="template-btn" data-template="quality-checklist">Quality Assurance Checklist</button></li>
+                        <li><button class="template-btn" data-template="expense-report">Expense Report</button></li>
+                        <li><button class="template-btn" data-template="training-outline">Training Session Outline</button></li>
+                        <li><button class="template-btn" data-template="milestone-tracker">Milestone Tracker</button></li>
+                    </ul>
+                </div>
+                <div class="editor-screen">
+                    <div class="screen-header">
+                        <h2>Editor</h2>
+                    </div>
+                    <div class="type-display" contenteditable="true">
+                        <p>Start typing...</p>
+                    </div>
+                    <div class="button-container">
+                        <button class="save-btn">Save</button>
+                        <button class="share-btn">Share</button>
+                    </div>
+                </div>
+            </div>
+        </main>        
+
+        <footer class="footer">
+            <p>&copy; 2025 Bastet - WISE</p>
+        </footer>
+
+        <script src="js/editor.js"></script>
+    </body>
+</html>
