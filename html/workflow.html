@@ -26,8 +26,107 @@
             </ul>
         </nav>
 
-        <main>             
-        </main>
+        <main class="workflow-wrapper">
+            <div class="extra-box">
+              <button id="addTeamBtn">+ Add Team</button>
+              <section id="workflowGrid" class="workflow-grid">
+                <!-- JS will add workflow boxes here -->
+              </section>
+            </div>
+          </main>
+          
+          <!-- Backdrop for modals -->
+          <div id="modalBackdrop"></div>
+          <div id="createBackdrop"></div>
+          
+          <!-- View/Edit Team Modal -->
+          <div id="teamModal">
+            <button id="teamModalClose">&times;</button>
+          
+            <div class="modal-header">
+              <h2 id="modalTitle"></h2>
+              <button class="settings-btn" title="Settings">⚙️</button>
+            </div>
+          
+            <div class="team-meta">
+              <p><strong>Lead:</strong> <span id="modalLead"></span></p>
+              <p><strong>Project:</strong> <span id="modalProject" class="project-title"></span></p>
+              <p><strong>Members:</strong> <span id="modalMembers" class="member-count"></span></p>
+            </div>
+          
+            <div class="progress-section">
+              <p><strong>Progress:</strong> <span id="modalProgressText" class="progress-text"></span></p>
+              <div class="progress-bar">
+                <div id="modalProgressFill" class="progress-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+          
+            <div id="modalTags" class="team-tags">
+              <!-- Tags added via JS -->
+            </div>
+          
+            <div class="team-status">
+              <button id="modalStatusBtn" class="status-cycle-btn">
+                <span class="status-label"></span>
+              </button>
+            </div>
+          
+            <div class="task-section">
+              <h3>Tasks</h3>
+              <ul id="modalTaskList" class="task-list">
+                <!-- Tasks added via JS -->
+              </ul>
+            </div>
+          
+            <div class="last-updated">
+              <small>Updated: <span id="modalUpdatedTime" class="update-time"></span></small>
+            </div>
+          </div>
+          
+          <!-- Create Team Modal -->
+<div id="createTeamModal">
+    <button id="createTeamClose">&times;</button>
+    <form id="createTeamForm">
+      <h2>Create a New Team</h2>
+  
+      <label>
+        Team Title:
+        <input type="text" name="title" required />
+      </label>
+  
+      <label>
+        Team Lead:
+        <input type="text" name="lead" required />
+      </label>
+  
+      <label>
+        Project:
+        <input type="text" name="project" required />
+      </label>
+  
+      <label>
+        Members (comma-separated):
+        <input type="text" name="members" placeholder="Alice,Bob,Charlie" />
+      </label>
+  
+      <label>
+        Tags (comma-separated):
+        <input type="text" name="tags" placeholder="Frontend,Urgent" />
+      </label>
+  
+      <label>
+        Progress (%):
+        <input type="number" name="progress" min="0" max="100" value="0" />
+      </label>
+  
+      <label>
+        Tasks (comma-separated):
+        <input type="text" name="tasks" placeholder="Task one,Task two" />
+      </label>
+  
+      <button type="submit">Create Team</button>
+    </form>
+  </div>  
 
         <footer class="footer">
             <p>&copy; 2025 Bastet - WISE</p>
