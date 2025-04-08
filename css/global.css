@@ -1,8 +1,8 @@
 :root {
-    --dark: #406b8c;
-    --light: #f8d8c1;
-    --contrast: #d44720;
-    --highlight: #e9a752;
+    --dark: #232B2B;
+    --light: #F1F4F1;
+    --contrast: #3C6E71;
+    --highlight: #F4B400;
 }
 
 /* main styling c91e46 */
@@ -15,7 +15,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     max-width: 100%;
     overflow-x: hidden;
-    background-color: #8aa8ab;
+    background-color: #F3F1EA;
     color: var(--dark);
 }
 

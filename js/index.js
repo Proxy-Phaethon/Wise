@@ -237,3 +237,36 @@ expandedChatInput.addEventListener("keypress", function (event) {
 
 expandChatBtn.addEventListener("click", expandChatbox);
 closeChatBtn.addEventListener("click", closeChatbox);
+
+//for updates box
+document.addEventListener('DOMContentLoaded', () => {
+    const dashboardList = document.querySelector('#updates-list');
+    const updates = JSON.parse(localStorage.getItem('updates')) || [];
+  
+    dashboardList.innerHTML = '';
+  
+    updates.slice(0, 3).forEach((update, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <a href="html/updates.html#update-${index + 1}">
+          ${update.title}
+        </a>
+      `;
+      dashboardList.appendChild(li);
+    });
+  });
+
+  // Smooth scroll to updates when hash is clicked
+document.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 200);
+      }
+    }
+  });
+  
+  
